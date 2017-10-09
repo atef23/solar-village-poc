@@ -61,7 +61,7 @@ Supply the following roles for each user:
 **Use the following CURL commands to run the process**
 
 **Start process:**
-curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user bpmsAdmin:bpmsuite1! -d '{"orderID":"1231234","orderDate":"10/10/2017","hoaMembership":true,"hoaMeetingDate":"11/10/2017","propertyAddressLine1":"8205 Willow Dr.","city":"Dallas","state":"Texas","country":"USA","zipCode":23456}' http://localhost:8080/kie-server/services/rest/server/containers/solarvillagepoc/processes/solarVillage.NewOrderPermitting/instances
+curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user username:password -d '{"orderID":"1231234","orderDate":"10/10/2017","hoaMembership":true,"hoaMeetingDate":"11/10/2017","propertyAddressLine1":"8205 Willow Dr.","city":"Dallas","state":"Texas","country":"USA","zipCode":23456}' http://localhost:8080/kie-server/services/rest/server/containers/solarvillagepoc/processes/solarVillage.NewOrderPermitting/instances
 
 **Get process instances:**
 curl -X GET -H "Accept: application/json" --user username:password http://localhost:8080/kie-server/services/rest/server/queries/containers/solarvillagepoc/process/instances
