@@ -12,10 +12,10 @@ Setup:
   
       Supply the following roles for each user:
       
-      salesUser=analyst,user,sales,kie-server
-      executiveUser=analyst,user,executives,kie-server
+        salesUser=analyst,user,sales,kie-server
+        executiveUser=analyst,user,executives,kie-server
     
-      {bpms-install-location}/target/jboss-eap-6.4/bin/add-user.sh
+        {bpms-install-location}/target/jboss-eap-6.4/bin/add-user.sh
 
 4. Configure email for notifications:
   - run {bpms-install-location}/target/jboss-eap-6.4/bin/jboss-cli.sh -c --controller=127.0.0.1:9990
