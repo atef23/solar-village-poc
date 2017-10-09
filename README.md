@@ -16,7 +16,7 @@ Supply the following roles for each user:
       
 {bpms-install-location}/target/jboss-eap-6.4/bin/add-user.sh
 
-** 4. Configure email for notifications:**
+**4. Configure email for notifications:**
   - run *{bpms-install-location}/target/jboss-eap-6.4/bin/jboss-cli.sh -c --controller=127.0.0.1:9990*
   - Configure an email of your choice to use as the smtp server. In this example, a gmail account is used. Run the following    CLI commands:
   
