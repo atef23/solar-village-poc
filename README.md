@@ -11,6 +11,7 @@ Setup:
 3. Add users and update roles. Run the following script for "salesUser" and "executiveUser":
   
       Supply the following roles for each user:
+      
       salesUser=analyst,user,sales,kie-server
       executiveUser=analyst,user,executives,kie-server
     
