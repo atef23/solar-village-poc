@@ -21,7 +21,9 @@ Setup:
   - Configure an email of your choice to use as the smtp server. In this example, a gmail account is used. Run the following    CLI commands: 
   
   /socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=jbpm-mail-smtp/:add(host=smtp.gmail.com, port=465)
- /subsystem=mail/mail-session=jbpm/:add(jndi-name=java:/jbpmMailSession, from=username@gmail.com)     
+  
+ /subsystem=mail/mail-session=jbpm/:add(jndi-name=java:/jbpmMailSession, from=username@gmail.com)  
+ 
  /subsystem=mail/mail-session=jbpm/server=smtp/:add(outbound-socket-binding-ref=jbpm-mail-smtp, ssl=true, username=username@gmail.com, password=password)     
   
 (Please request pre-configured email from Atef if you prefer to use that)
