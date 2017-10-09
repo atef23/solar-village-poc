@@ -16,7 +16,7 @@ Supply the following roles for each user:
       
 {bpms-install-location}/target/jboss-eap-6.4/bin/add-user.sh
 
-** 4. Configure email for notifications:**
+**4. Configure email for notifications:**
   - run *{bpms-install-location}/target/jboss-eap-6.4/bin/jboss-cli.sh -c --controller=127.0.0.1:9990*
   - Configure an email of your choice to use as the smtp server. In this example, a gmail account is used. Run the following    CLI commands:
   
@@ -45,20 +45,20 @@ Supply the following roles for each user:
   - Save and restart server
   
   
-** 5. Deploy Project **
+**5. Deploy Project**
 - Under Deploy -> Execution Servers go to your remote KIE server and click "Add Container"
 - Select 1.2 version of com.redhat.poc:solarVillage:1.2 and start container
 
-** 6. Deploy Government Approvals REST Services**
+**6. Deploy Government Approvals REST Services**
 - Download government approvals rest project (this will mock endpoints for the permit approval process): git clone https://github.com/atef23/solar-village-govt-approvals.git
 - run "mvn clean install wildfly:deploy" in solar-village-govt-approvals directory
 
-** 7. Configure User Task for Email Test**
+**7. Configure User Task for Email Test**
 - The escalation on the user task for HOA Approvals occurs 10 days before the HOA meeting date if the task has not been claimed. To test this feature change the task expiration with the following steps:
 - Navigate to the New Order Permitting business process in the business central workbench.
 - Click on "HOA Approval" user task and change the ExpiresAt attribute from                              "#{hoaMeetingExpiration}" to "1m". This will escalate the task after 1m for email testing.
 
-** Use the following CURL commands to run the process**
+**Use the following CURL commands to run the process**
 
 **Start process:**
 curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user bpmsAdmin:bpmsuite1! -d '{"orderID":"1231234","orderDate":"10/10/2017","hoaMembership":true,"hoaMeetingDate":"11/10/2017","propertyAddressLine1":"8205 Willow Dr.","city":"Dallas","state":"Texas","country":"USA","zipCode":23456}' http://localhost:8080/kie-server/services/rest/server/containers/solarvillagepoc/processes/solarVillage.NewOrderPermitting/instances
