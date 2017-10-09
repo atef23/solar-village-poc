@@ -53,7 +53,7 @@ Supply the following roles for each user:
 - Download government approvals rest project (this will mock endpoints for the permit approval process): git clone https://github.com/atef23/solar-village-govt-approvals.git
 - run "mvn clean install wildfly:deploy" in solar-village-govt-approvals directory
 
-**7. Configure User Task for Email Test**
+**7. Configure User Task for Email Testing (optional)**
 - The escalation on the user task for HOA Approvals occurs 10 days before the HOA meeting date if the task has not been claimed. To test this feature change the task expiration with the following steps:
 - Navigate to the New Order Permitting business process in the business central workbench.
 - Click on "HOA Approval" user task and change the ExpiresAt attribute from                              "#{hoaMeetingExpiration}" to "1m". This will escalate the task after 1m for email testing.
